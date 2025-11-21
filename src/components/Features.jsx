@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Features() {
   return (
     <section style={{ padding: '20px' }}>
