@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Alice Johnson",
+    "rating": 5,
+    "comment": "Absolutely love this product! The instant prints are so much fun and the quality is fantastic."
+  },
+  {
+    "name": "Bob Smith",
+    "rating": 1,
+    "comment": "Horrible camera. The prints are always blurry and the battery dies quickly."
+  },
+  {
+    "name": "Catherine Lee",
+    "rating": 3,
+    "comment": "The camera is good, but I wish the battery life was longer. Still, the print quality makes up for it."
+  }
+]
