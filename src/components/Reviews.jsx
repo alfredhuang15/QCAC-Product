@@ -27,7 +27,7 @@ export default function Reviews() {
       <div>
         {reviews.map((review, index) => (
           <div key={index} style={{ marginBottom: "15px" }}>
-            <h3>{review.title}</h3>
+            <h3>{review.name}</h3>
             <p>Rating: {renderStars(review.rating)}</p>
             <p>{review.comment}</p>
           </div>
