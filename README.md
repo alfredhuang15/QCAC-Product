@@ -8,7 +8,7 @@ The page features:
 - A form to add new reviews containing an interactive star display to rate the product and saving the reviews into local storage
 
 ## Prerequisites
-before running this project make sure you these installed:
+Before running this project make sure you have these installed:
 1. **Node.js**
 2. **npm**
 
