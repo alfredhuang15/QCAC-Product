@@ -9,8 +9,8 @@ The page features:
 
 ## Prerequisites
 before running this project make sure you these installed:
-**Node.js**
-**npm**
+1. **Node.js**
+2. **npm**
 
 ## Installation
 To install this project:
