@@ -9,7 +9,7 @@ export default function Hero() {
       padding: '4rem 2rem',
       textAlign: 'center',
       color: 'white'
-    }} >
+    }}>
       <h1 style={{
         fontSize: '3.5rem',
         fontWeight: '700',

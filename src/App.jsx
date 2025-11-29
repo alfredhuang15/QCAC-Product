@@ -14,6 +14,7 @@ export default function App() {
 
       if (storedReviews) {
         setReviews(JSON.parse(storedReviews));
+        
       } else {
         localStorage.setItem('reviews', JSON.stringify(sampleReviews));
         setReviews(sampleReviews);

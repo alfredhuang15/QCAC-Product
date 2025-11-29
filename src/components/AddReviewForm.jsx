@@ -42,8 +42,9 @@ export default function AddReviewForm({ onAddReview }) {
           width: "28px",
           height: "28px",
           display: "inline-block",
-          marginRight: "5px", }}
-        >
+          marginRight: "5px", 
+        }}>
+
         <span
           style={{ position: "absolute",
             left: 0,
@@ -75,8 +76,9 @@ export default function AddReviewForm({ onAddReview }) {
             fontSize: "28px",
             pointerEvents: "none",
             color: (hoverRating || rating) >= i || (hoverRating || rating) >= i - 0.5 ? "#ffc107" : "#ccc",
-          }}
-        >{icon}</span>
+          }}>
+            {icon}
+        </span>
       </div>
     );
   }
@@ -86,6 +88,7 @@ export default function AddReviewForm({ onAddReview }) {
       backgroundColor: '#F8F9FA',
       padding: '4rem 2rem'
     }}>
+
       <div style={{
         maxWidth: '600px',
         margin: '0 auto',
@@ -94,6 +97,7 @@ export default function AddReviewForm({ onAddReview }) {
         padding: '2rem',
         boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
       }}>
+
         <h2 style={{
           fontSize: '2rem',
           fontWeight: '700',
@@ -103,6 +107,7 @@ export default function AddReviewForm({ onAddReview }) {
         }}>
           Add Your Review
         </h2>
+
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           <div>
             <div>
@@ -170,8 +175,7 @@ export default function AddReviewForm({ onAddReview }) {
               e.target.style.backgroundColor = '#000000ff';
               e.target.style.transform = 'translateY(0)'; 
               e.target.style.boxShadow = '0 4px 15px rgba(102, 126, 234, 0.3)';
-            }}
-          >
+            }}>
             Submit Review
           </button>
         </div>
