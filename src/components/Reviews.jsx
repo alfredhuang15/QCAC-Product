@@ -3,8 +3,6 @@ import reviews from "../data/sampleReviews.json";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 
 export default function Reviews() {
-  const [rating, setRating] = React.useState(0);
-  const [hoverRating, setHoverRating] = React.useState(0);
 
   const renderStars = (rating) => {
     const stars = [];
@@ -23,80 +21,49 @@ export default function Reviews() {
     return stars;
   };
 
-  const starDisplay = hoverRating || rating;
-
-  const hoverStars = [];
-  for (let i = 1; i <= 5; i++) {
-    const fill = starDisplay;
-
-    const icon = 
-    fill >= i ? (
-      <FaStar color="#ffc107" />
-    ) : fill >= i - 0.5 ? (
-      <FaStarHalfAlt color="#ffc107" />
-    ) : (
-      <FaRegStar color="#ffc107" />
-    );
-
-    hoverStars.push(
-      <div key={i}
-        style={{   position: "relative",
-          width: "28px",
-          height: "28px",
-          display: "inline-block",
-          marginRight: "5px", }}
-        >
-        <span
-          style={{ position: "absolute",
-            left: 0,
-            width: "50%",
-            height: "100%",
-            cursor: "pointer",
-            zIndex: 2}}
-          onMouseEnter={() => setHoverRating(i - 0.5)}
-          onMouseLeave={() => setHoverRating(0)}
-          onClick={() => setRating(i - 0.5)}
-        />
-
-        <span
-          style={{ position: "absolute",
-            right: 0,
-            width: "50%",
-            height: "100%",
-            cursor: "pointer",
-            zIndex: 2, }}
-          onMouseEnter={() => setHoverRating(i)}
-          onMouseLeave={() => setHoverRating(0)}
-          onClick={() => setRating(i)}
-        />
-        <span
-          style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            fontSize: "28px",
-            pointerEvents: "none",
-            color: "#ffc107",
-          }}
-        >{icon}</span>
-      </div>
-    );
-  }
-
   return (
-    <section style={{ padding: "20px" }}>
-      <h2>Customer Ratings</h2>
-
-      <div>
-        {hoverStars}
-      </div>
+    <section style={{
+      padding: '4rem 2rem',
+      backgroundColor: 'white'
+     }}>
+      <h2 style={{
+        fontSize: '2.5rem',
+        fontWeight: '700',
+        textAlign: 'center',
+        marginBottom: '2rem',
+        color: '#2C3E50'
+      }}>
+        Customer Reviews
+      </h2>
 
       <div>
         {reviews.map((review, index) => (
-          <div key={index} style={{ marginBottom: "15px" }}>
-            <h3>{review.name}</h3>
-            <p>Rating: {renderStars(review.rating)}</p>
-            <p>{review.comment}</p>
+          <div key={index} style={{
+            backgroundColor: '#F8F9FA',
+            borderRadius: '12px',
+            padding: '1.5rem',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+           }}>
+            <h3 style={{
+              fontSize: '1.3rem',
+              color: '#2C3E50',
+              marginBottom: '0.5rem'
+            }}>
+              {review.name}
+            </h3>
+            <div style={{
+              display: 'flex',
+              gap: '0.3rem',
+              marginBottom: '0.8rem'
+            }}>
+              Rating: {renderStars(review.rating)}
+            </div>
+              <p style={{
+                color: '#555',
+                fontSize: '1.05rem',
+                lineHeight: '1.6',
+                margin: 0
+              }}>{review.comment}</p>
           </div>
         ))}
       </div>

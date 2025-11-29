@@ -5,7 +5,6 @@ export default function FeatureCard({  description }) {
 
   return (
     <div style={{
-
       flex: '1 1 250px',
       backgroundColor: '#1E1E1E',
       borderRadius: '16px',
