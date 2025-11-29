@@ -1,8 +1,7 @@
 import React from "react";
-import reviews from "../data/sampleReviews.json";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 
-export default function Reviews() {
+export default function Reviews({ reviews }) {
 
   const renderStars = (rating) => {
     const stars = [];
